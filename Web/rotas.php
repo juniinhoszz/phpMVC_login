@@ -105,6 +105,14 @@ switch($url)
         LoginController::save();
     break;
 
+    case '/login/lista':
+        LoginController::lista();
+    break;
+
+    case '/login/delete':
+        LoginController::delete();
+    break;
+
 
 
     

@@ -13,17 +13,17 @@
     </style>
 </head>
 <body>
-    <form action="/login/save" method="post">
+    <form action="/signin/save" method="post">
         <fieldset>
             <legend style=" color:white">Cadastro de Usuários</legend>
 
-            
+            <input type="hidden" value="<?= $model->id ?>" name="id" />
             
             <label for="nome" style="color: white;">Nome:</label>
-            <input name="nome" id="nome"  type="text" style="background:#484d50; color:white; height:20px;" />
+            <input name="nome" id="nome" type="text" style="background:#484d50; color:white; height:20px;" />
 
             <label for="usuario" style="color: white;">Usuário:</label>
-            <input name="usuario"  id="usuario" type="text" style="background:#484d50; color:white; height:20px;" />
+            <input name="usuario"  id="usuario"  type="text" style="background:#484d50; color:white; height:20px;" />
 
             <label for="senha" style="color: white;">Senha:</label>
             <input name="senha" id="senha" type="password" style="background:#484d50; color:white; height:20px;" />
@@ -32,10 +32,10 @@
 
             <div style="display: flex;">
             <a href="/login"><p style="color: white;font-size: 8; margin-right: 10px;">Login</p></a>
-            <a href="/login?id=<?= $item['id'] ?>"><p style="color: white;font-size: 8; margin-left: 10px;">Esqueci a senha</p></a>
+            <a href="/"><p style="color: white;font-size: 8; margin-left: 10px;">Esqueci a senha</p></a>
             </div>
         </fieldset>
-    </form>    
+    </form>
 
 <style>
         body{

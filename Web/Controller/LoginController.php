@@ -1,6 +1,8 @@
 <?php
 
 namespace Web\Controller;
+
+use Web\DAO\LoginDAO;
 use Web\Model\LoginModel;
 
 
@@ -20,6 +22,11 @@ class LoginController extends Controller
     public static function signin()
     {
         include 'View/modules/Login/LoginSignIn.php';
+    }
+
+    public static function lista()
+    {
+        include 'View/modules/Login/LoginLista.php';
     }
 
     public static function auth()
@@ -55,12 +62,23 @@ class LoginController extends Controller
         $login->id = $_POST['id'];
         $login->nome = $_POST['nome'];
         $login->usuario = $_POST['usuario'];
-        $login->rg = $_POST['senha'];
+        $login->senha = $_POST['senha'];
         
         
         $login->save();
 
         header("Location: /login"); 
+    }
+
+    public static function delete()
+    {
+
+
+        $model = new LoginDAO();
+
+        $model->delete( (int) $_GET['id'] ); // Enviando a variável $_GET como inteiro para o método delete
+
+        header("Location: /login");
     }
 
 

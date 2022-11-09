@@ -29,7 +29,7 @@
 
             <div style="display: flex;">
             <a href="/signin"><p style="color: white;font-size: 8; margin-right: 10px;">Cadastro de Usuários</p></a>
-            <a href="/login?id=<?= $item['id'] ?>"><p style="color: white;font-size: 8; margin-left: 10px;">Esqueci a senha</p></a>
+            <a href="/"><p style="color: white;font-size: 8; margin-left: 10px;">Esqueci a senha</p></a>
             </div>
         </fieldset>
     </form>    

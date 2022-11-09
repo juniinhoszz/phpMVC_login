@@ -15,7 +15,9 @@
 <center><a href="/pessoa/form"><button style="height: 85px; width:350px; font-size:25px; background-color:#484d50;border: 1 solid black;color:white" >Adicionar  pessoas</button></a></center><br>
 <center><a href="/categoria/form"><button style="height: 85px; width:350px; font-size:25px; background-color:#484d50;border: 1 solid black;color:white" >Adicionar categorias de produtos</button></a></center><br>
 <center><a href="/funcionario/form"><button style="height: 85px; width:350px; font-size:25px; background-color:#484d50;border: 1 solid black;color:white" >Adicionar funcionários</button></a></center><br>
+<center><a href="/login/lista"><button style="height: 85px; width:350px; font-size:25px; background-color:#484d50;border: 1 solid black;color:white" >Lista de usuarios</button></a></center><br>
 <br>
+
 
 <center><b style="font-size:29px; color:white">Rodrigão microfone agradece:</b></center>
 <center><img style="height: 160px; width: 160px; font-size:50px;" src="img\rodrigobocaberta.jpeg"> </center><br>

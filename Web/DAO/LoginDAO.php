@@ -9,7 +9,6 @@ class LoginDAO extends DAO
 {
     public function __construct()
     {
-        
         parent::__construct();       
     }
    
@@ -76,6 +75,16 @@ class LoginDAO extends DAO
         $stmt->execute();
 
         return $stmt->fetchAll();
+    }
+
+    public function delete(int $id)
+    {
+        $sql = "DELETE FROM login WHERE id = ? ";
+
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $id);
+        
+        $stmt->execute();
     }
 
     

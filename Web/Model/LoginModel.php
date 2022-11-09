@@ -57,4 +57,12 @@ class LoginModel extends Model
         return ($obj) ? $obj : new LoginModel(); // Operador Ternário
 
     }
+
+    public function delete(int $id)
+    {
+
+        $dao = new LoginDAO();
+
+        $dao->delete($id);
+    }
 }
