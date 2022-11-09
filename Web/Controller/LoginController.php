@@ -6,9 +6,20 @@ use Web\Model\LoginModel;
 
 class LoginController extends Controller
 {
-    public static function index()
+    public static function form()
     {
+        $model = new LoginModel();
+
+        if(isset($_GET['id'])) 
+            $model = $model->getById( (int) $_GET['id']); 
+            
+
         include 'View/modules/Login/LoginForm.php';
+    }
+
+    public static function signin()
+    {
+        include 'View/modules/Login/LoginSignIn.php';
     }
 
     public static function auth()
@@ -36,4 +47,21 @@ class LoginController extends Controller
 
         parent::isAuthenticated();
     }
+
+    public static function save() 
+    {
+        $login = new LoginModel();
+
+        $login->id = $_POST['id'];
+        $login->nome = $_POST['nome'];
+        $login->usuario = $_POST['usuario'];
+        $login->rg = $_POST['senha'];
+        
+        
+        $login->save();
+
+        header("Location: /login"); 
+    }
+
+
 }

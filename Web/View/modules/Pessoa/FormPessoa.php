@@ -47,7 +47,7 @@
     <br>
     <center><a href="/pessoa"><button style="height: 85px; width:350px; font-size:25px; background-color:#484d50;border: 1 solid black;color:white" >Ver listagem de pessoas</button></a></center>
 
-    <a href="/"><button style="height: 85px; width:350px; font-size:25px; background-color:#484d50;border: 1 solid black; position: absolute;
+    <a href="/inicio"><button style="height: 85px; width:350px; font-size:25px; background-color:#484d50;border: 1 solid black; position: absolute;
     bottom: 0;
     width: 99%;
     height: 100px;    

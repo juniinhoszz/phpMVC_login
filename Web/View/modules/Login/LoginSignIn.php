@@ -13,22 +13,25 @@
     </style>
 </head>
 <body>
-    <form action="/login/auth" method="post">
+    <form action="/login/save" method="post">
         <fieldset>
-            <legend style=" color:white">Login</legend>
+            <legend style=" color:white">Cadastro de Usuários</legend>
 
             
+            
+            <label for="nome" style="color: white;">Nome:</label>
+            <input name="nome" id="nome"  type="text" style="background:#484d50; color:white; height:20px;" />
+
             <label for="usuario" style="color: white;">Usuário:</label>
-            <input name="usuario" id="usuario" type="text" style="background:#484d50; color:white; height:20px;" />
+            <input name="usuario"  id="usuario" type="text" style="background:#484d50; color:white; height:20px;" />
 
             <label for="senha" style="color: white;">Senha:</label>
             <input name="senha" id="senha" type="password" style="background:#484d50; color:white; height:20px;" />
             <br>
-            <button type="submit" style="background-color:#484d50 ; height:35px; width:65px; font-size:17px;color:white">Entrar</button>
-
+            <button type="submit" style="background-color:#484d50 ; height:35px; width:100px; font-size:17px;color:white">Cadastrar</button>
 
             <div style="display: flex;">
-            <a href="/signin"><p style="color: white;font-size: 8; margin-right: 10px;">Cadastro de Usuários</p></a>
+            <a href="/login"><p style="color: white;font-size: 8; margin-right: 10px;">Login</p></a>
             <a href="/login?id=<?= $item['id'] ?>"><p style="color: white;font-size: 8; margin-left: 10px;">Esqueci a senha</p></a>
             </div>
         </fieldset>

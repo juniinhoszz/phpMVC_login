@@ -83,8 +83,10 @@ switch($url)
         FuncionarioController::delete();
     break;
 
+    ##ROTAS PARA LOGIN
+
     case '/login':
-        LoginController::index();
+        LoginController::form();
     break;
 
     case '/login/auth':
@@ -95,7 +97,17 @@ switch($url)
         LoginController::logout();
     break;
 
+    case '/signin':
+        LoginController::signin();
+    break;
 
+    case '/signin/save':
+        LoginController::save();
+    break;
+
+
+
+    
     case '/inicio':
         include 'View/modules/Pg-inicial\Pagina-Inicial.php';
     break;
