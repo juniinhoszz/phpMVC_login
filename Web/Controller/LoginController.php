@@ -12,20 +12,27 @@ class LoginController extends Controller
     {
         $model = new LoginModel();
 
-        if(isset($_GET['id'])) 
-            $model = $model->getById( (int) $_GET['id']); 
-            
+
 
         include 'View/modules/Login/LoginForm.php';
     }
 
     public static function signin()
     {
+        $model = new LoginModel();
+
+        if(isset($_GET['id'])) 
+            $model = $model->getById( (int) $_GET['id']); 
+            
+
         include 'View/modules/Login/LoginSignIn.php';
     }
 
     public static function lista()
     {
+        $model = new LoginModel();
+        $model->getAllRows();
+
         include 'View/modules/Login/LoginLista.php';
     }
 
@@ -67,7 +74,7 @@ class LoginController extends Controller
         
         $login->save();
 
-        header("Location: /login"); 
+        header("Location: /login/lista"); 
     }
 
     public static function delete()
@@ -78,7 +85,7 @@ class LoginController extends Controller
 
         $model->delete( (int) $_GET['id'] ); // Enviando a variável $_GET como inteiro para o método delete
 
-        header("Location: /login");
+        header("Location: /login/lista");
     }
 
 

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listagem de Funcionários</title>
+    <title>Listagem de Usuários</title>
 </head>
 <body>
-<h1 align="center" style="color:white">Listagem de Usuarios</h1>
+<h1 align="center" style="color:white">Listagem de Usuários</h1>
 <table id="tabela" width="100%" border="1" bgcolor="gainsboro">
     <tr>
     <th style="color:white; font-size:15px">Excluir</th>
@@ -23,7 +23,7 @@
     
     <td> <a style="color:red; text-decoration: none;" href="/login/delete?id=<?= $item['id'] ?>"><b> X</b> </a>  </td>
         <td style="color:white"><?= $item['id'] ?></td>
-        <td><a style="text-decoration: none; color:aqua;" href="/login?id=<?= $item['id'] ?>"><b> <?= $item['nome'] ?> </b></a></td>
+        <td><a style="text-decoration: none; color:aqua;" href="/signin?id=<?= $item['id'] ?>"><b> <?= $item['nome'] ?> </b></a></td>
         <td style="color:white"><?= $item['usuario'] ?></td>
         <td style="color:white"><?= $item['senha'] ?></td>
     </tr>

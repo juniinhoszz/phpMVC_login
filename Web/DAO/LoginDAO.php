@@ -45,13 +45,13 @@ class LoginDAO extends DAO
 
     public function update(LoginModel $model)
     {
-        $sql = "UPDATE pessoa SET nome=?, usuario=?, senha=? WHERE id=? ";
+        $sql = "UPDATE login SET nome=?, usuario=?, senha=sha1(?) WHERE id=? ";
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(1, $model->nome);
-        $stmt->bindValue(1, $model->usuario);
-        $stmt->bindValue(2, $model->senha);
-        $stmt->bindValue(8, $model->id);
+        $stmt->bindValue(2, $model->usuario);
+        $stmt->bindValue(3, $model->senha);
+        $stmt->bindValue(4, $model->id);
         $stmt->execute();
     }
 

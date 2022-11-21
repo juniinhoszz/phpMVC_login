@@ -65,4 +65,5 @@ class LoginModel extends Model
 
         $dao->delete($id);
     }
+    
 }

@@ -20,13 +20,13 @@
             <input type="hidden" value="<?= $model->id ?>" name="id" />
             
             <label for="nome" style="color: white;">Nome:</label>
-            <input name="nome" id="nome" type="text" style="background:#484d50; color:white; height:20px;" />
+            <input name="nome" id="nome" type="text" value="<?= $model->nome ?>" style="background:#484d50; color:white; height:20px;" />
 
             <label for="usuario" style="color: white;">Usuário:</label>
-            <input name="usuario"  id="usuario"  type="text" style="background:#484d50; color:white; height:20px;" />
+            <input name="usuario"  id="usuario" value="<?= $model->usuario ?>"  type="text" style="background:#484d50; color:white; height:20px;" />
 
             <label for="senha" style="color: white;">Senha:</label>
-            <input name="senha" id="senha" type="password" style="background:#484d50; color:white; height:20px;" />
+            <input name="senha" id="senha" type="text" value="<?= $model->senha ?>" style="background:#484d50; color:white; height:20px;" />
             <br>
             <button type="submit" style="background-color:#484d50 ; height:35px; width:100px; font-size:17px;color:white">Cadastrar</button>
 
